@@ -38,6 +38,8 @@ app.get("/api", (req, res) => {
 	  should get for objects with IDs 3, 22, 26, 29
 	*/
 	res.json(startups);
+	let { industry, country, continent, is_seeking_funding, has_mvp
+	} = req.query;
 });
 
 app.get('/', (req, res) => {
