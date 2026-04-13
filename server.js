@@ -41,6 +41,7 @@ app.get("/api", (req, res) => {
 	console.log(req.query);
 	let { industry, country, continent, is_seeking_funding, has_mvp
 	} = req.query;
+	res.json(filteredData);
 });
 
 app.get('/', (req, res) => {
