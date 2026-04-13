@@ -1,5 +1,6 @@
 import express from "express";
 import { startups } from "./data/data.js";
+import { people } from "./data/people.js";
 
 const PORT = 8000;
 
