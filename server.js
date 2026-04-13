@@ -38,7 +38,7 @@ app.get("/api", (req, res) => {
 	/api?continent=asia&is_seeking_funding=true&has_mvp=true
 	  should get for objects with IDs 3, 22, 26, 29
 	*/
-	res.json(startups);
+	console.log(req.query);
 	let { industry, country, continent, is_seeking_funding, has_mvp
 	} = req.query;
 });
