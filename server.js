@@ -9,4 +9,8 @@ const celebrity = {
 
 const app = express();
 
+app.get('/', (req, res) => {
+	res.json(celebrity);
+});
+
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
