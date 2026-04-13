@@ -17,6 +17,7 @@ app.get("/people", (req, res) => {
 });
 
 app.get("/api", (req, res) => {
+	let filteredData = startups;
 	// TODO: based on the query serve the data to user
 	/*
 	Challenge:
