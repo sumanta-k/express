@@ -11,6 +11,10 @@ const celebrity = {
 
 const app = express();
 
+app.get("/people", (req, res) => {
+	res.json(people);
+});
+
 app.get("/api", (req, res) => {
 	res.json(startups);
 });
