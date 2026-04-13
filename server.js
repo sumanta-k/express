@@ -11,6 +11,17 @@ const celebrity = {
 
 const app = express();
 
+app.get("/api/:category/:type", (req, res) => {
+	let { category, type } = req.params;
+	if (category.toLowerCase() === "crypto") {
+		console.log({ category: "crypto-name", type: type });
+	}
+	if (category.toLowerCase() === "metals") {
+		console.log(req.params);
+	}
+	res.json();
+})
+
 app.get("/people", (req, res) => {
 	console.log(req.query);
 	res.json(people);
