@@ -10,6 +10,10 @@ const celebrity = {
 
 const app = express();
 
+app.get("/api", (req, res) => {
+	res.json(startups);
+});
+
 app.get('/', (req, res) => {
 	res.json(celebrity);
 });
