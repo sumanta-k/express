@@ -41,6 +41,31 @@ app.get("/api", (req, res) => {
 	console.log(req.query);
 	let { industry, country, continent, is_seeking_funding, has_mvp
 	} = req.query;
+	if (industry) {
+		filteredData = filteredData.filter((data) => {
+			return data.industry.toLowerCase() === industry.toLowerCase();
+		})
+	}
+	if (country) {
+		filteredData = filteredData.filter((data) => {
+			return data.country.toLowerCase() === country.toLowerCase();
+		})
+	}
+	if (continent) {
+		filteredData = filteredData.filter((data) => {
+			return data.continent.toLowerCase() === continent.toLowerCase();
+		})
+	}
+	if (is_seeking_funding) {
+		filteredData = filteredData.filter((data) => {
+			return data.is_seeking_funding === JSON.parse(is_seeking_funding);
+		})
+	}
+	if (has_mvp) {
+		filteredData = filteredData.filter((data) => {
+			return data.has_mvp === JSON.parse(has_mvp);
+		})
+	}
 	res.json(filteredData);
 });
 
